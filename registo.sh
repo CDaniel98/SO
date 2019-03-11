@@ -25,13 +25,11 @@ do
 			if grep -Fxq $r_uni $f_uni
 			then
 				echo "ERRO: Esta Universidade já se encontra registada! "
-								
+						
 			else
 				echo $r_uni >> uni.txt 
-				break;
-
+			fi
 		 ;;
-		 
 		 "Professor")
 			echo "Registo de $opt_r"
 			echo " "
@@ -43,9 +41,8 @@ do
 				echo "ERRO: Este Professor já se encontra registado! "
 			else
 				 echo $r_prof >> profs.txt
-				 brEak;
+			fi
 		 ;;	
-
 		"Discplina")
 			echo "Registo de $opt_r"
 			echo " "
@@ -57,11 +54,8 @@ do
 				echo "ERRO: Esta Disciplina já se encontra registada! "
 			else
 				echo $r_dis >> dis.txt
-				 break;
-			
+			fi
 		 ;;
-
-
 		"Estudante")
 			echo  "Insira o nome do Aluno:"
 			read nome
@@ -69,19 +63,19 @@ do
 			if grep -Fxq $nome $f_alunos
 		 	then
 				echo "ERRO: nome já existente"
-
 			else
 				echo $nome >> dados.txt
 				echo  "Insira a universidade dentro das seguintes:"
-				read uni
 				cat $f_uni
+				read uni
+				
 
 				if grep -Fxq $uni $f_uni
 				then
 
 					echo  "Insira o/a docente responsável:"
-					read prof
 					cat $f_profs
+					read prof
 								
 					if grep -Fxq $prof $f_profs
 					then
@@ -90,19 +84,22 @@ do
 						let maxid=$maxid+1
 
 						echo $maxid":"$nome":"$uni":"$prof >> dados.txt
-						break;
-
+						
 					else
-						 echo "ERRO: Universidade inexistente, registe-a primeiro."	
+						 echo "ERRO: docente inexistente, registe-o primeiro."
+					fi
 
-						else
-							echo "ERRO: nome já existente"
+				else
+					echo "ERRO: Universidade inexistente, registe-a primeiro."	
+				fi	
+
+			fi
 			;;
 
 		 "Menu anterior")
 			bash "main.sh"
-			;;
-	     )echo "invalid option $REPLY";;
+		 	;;
+	     *) echo "invalid option $REPLY";;
 	 esac
  done
 			
