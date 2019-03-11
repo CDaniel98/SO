@@ -21,7 +21,7 @@ do
 			
             ;;
 		"Relatórios")
-            echo "you chose choice $REPLY which is $opt"
+            bash "relatorios.sh"
             ;;
         "Sair do Programa")
             break
