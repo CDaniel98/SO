@@ -1,0 +1,13 @@
+
+git remote add origin https://github.com/CDaniel98/SO.git
+git config --global user.email "you@example.com" 
+git config --global user.name "Your Name"
+
+dar commit:
+
+git add FICHEIRO 
+git commit -m "comentario"
+git push -u origin master
+
+
+
