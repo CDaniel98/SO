@@ -1,13 +1,16 @@
-
-git remote add origin https://github.com/CDaniel98/SO.git
-git config --global user.email "you@example.com" 
-git config --global user.name "Your Name"
+1º vez:
+git clone https://github.com/CDaniel98/SO.git
 
 dar commit:
 
-git add FICHEIRO 
+git add ficheiro_a_adicionar.txt
 git commit -m "comentario"
 git push -u origin master
+
+
+dar pull:
+
+git pull 
 
 
 
