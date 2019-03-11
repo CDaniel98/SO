@@ -4,7 +4,7 @@
 			echo ""
             echo "Menu Registo/Editar"
 			echo " "
-			PS3='Introduza a opção: '
+			PS3='Introduza a opção:'
 			options_registo=("Universidade" "Professor" "Estudante" "Disciplina" "Menu anterior")
 			select opt_r in "${options_registo[@]}"
 			do
