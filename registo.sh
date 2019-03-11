@@ -11,7 +11,7 @@ f_uni="uni.txt"
 f_dados="dados.txt"
 
 PS3='Introduza a opção:'
-options_registo=("Universidade" "Professor" "Estudante" "Disciplina" "Menu anterior")
+options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu anterior")
 
 select opt_r in "${options_registo[@]}"
 do
@@ -43,13 +43,13 @@ do
 				 echo $r_prof >> profs.txt
 			fi
 		 ;;	
-		"Discplina")
+		"Disciplina")
 			echo "Registo de $opt_r"
 			echo " "
 			echo "Insira o nome da Disciplina:"
 			read r_dis
 
-			if grep -Fxq $r_dis $f_profs
+			if grep -Fxq $r_dis $f_dis
 			then
 				echo "ERRO: Esta Disciplina já se encontra registada! "
 			else
@@ -59,17 +59,16 @@ do
 		"Estudante")
 			echo  "Insira o nome do Aluno:"
 			read nome
-
+			### BASH Nao responde a partir daqui
 			if grep -Fxq $nome $f_alunos
 		 	then
 				echo "ERRO: nome já existente"
 			else
-				echo $nome >> dados.txt
+				echo $nome >> alunos.txt
 				echo  "Insira a universidade dentro das seguintes:"
 				cat $f_uni
 				read uni
-				
-
+		
 				if grep -Fxq $uni $f_uni
 				then
 
