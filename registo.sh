@@ -4,7 +4,7 @@
 echo ""
 echo "Menu Registo/Editar"
 echo " "
-falunos="alunos.txt"
+f_alunos="alunos.txt"
 f_profs="profs.txt"
 f_disc="disc.txt"
 f_uni="uni.txt"
@@ -28,6 +28,7 @@ do
 						
 			else
 				echo $r_uni >> uni.txt 
+				echo $r_uni" registada com sucesso! "
 			fi
 		 ;;
 		 "Professor")
@@ -41,6 +42,7 @@ do
 				echo "ERRO: Este Professor já se encontra registado! "
 			else
 				 echo $r_prof >> profs.txt
+				 echo $r_prof" registada/o com sucesso! "
 			fi
 		 ;;	
 		"Disciplina")
@@ -54,12 +56,12 @@ do
 				echo "ERRO: Esta Disciplina já se encontra registada! "
 			else
 				echo $r_dis >> dis.txt
+				echo $r_dis" registada com sucesso! "
 			fi
 		 ;;
 		"Estudante")
 			echo  "Insira o nome do Aluno:"
 			read nome
-			### BASH Nao responde a partir daqui
 			if grep -Fxq $nome $f_alunos
 		 	then
 				echo "ERRO: nome já existente"
@@ -83,6 +85,7 @@ do
 						let maxid=$maxid+1
 
 						echo $maxid":"$nome":"$uni":"$prof >> dados.txt
+						echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
 						
 					else
 						 echo "ERRO: docente inexistente, registe-o primeiro."
