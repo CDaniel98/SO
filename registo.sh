@@ -29,6 +29,9 @@ do
 			else
 				echo $r_uni >> uni.txt 
 				echo $r_uni" registada com sucesso! "
+				#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
+				bash "registo.sh"
+				break;
 			fi
 		 ;;
 		 "Professor")
@@ -43,6 +46,8 @@ do
 			else
 				 echo $r_prof >> profs.txt
 				 echo $r_prof" registada/o com sucesso! "
+				 #Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
+				 bash "registo.sh"
 			fi
 		 ;;	
 		"Disciplina")
@@ -57,6 +62,8 @@ do
 			else
 				echo $r_dis >> dis.txt
 				echo $r_dis" registada com sucesso! "
+				#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
+				bash "registo.sh"
 			fi
 		 ;;
 		"Estudante")
@@ -86,6 +93,8 @@ do
 
 						echo $maxid":"$nome":"$uni":"$prof >> dados.txt
 						echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
+						#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
+				        bash "registo.sh"
 						
 					else
 						 echo "ERRO: docente inexistente, registe-o primeiro."
