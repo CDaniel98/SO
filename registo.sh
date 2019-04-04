@@ -25,9 +25,9 @@ do
 			if grep -Fxq $r_uni $f_uni
 			then
 				echo "ERRO: Esta Universidade já se encontra registada! "
-						
+
 			else
-				echo $r_uni >> uni.txt 
+				echo $r_uni >> uni.txt
 				echo $r_uni" registada com sucesso! "
 				#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
 				bash "registo.sh"
@@ -40,7 +40,7 @@ do
 			echo "Insira o nome do Professor:"
 			read r_prof
 
-			if grep -Fxq $r_prof $f_profs
+			if grep -Fxq $r_prof $f_profs #se já existi no file não deixa registar
 			then
 				echo "ERRO: Este Professor já se encontra registado! "
 			else
@@ -49,7 +49,7 @@ do
 				 #Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
 				 bash "registo.sh"
 			fi
-		 ;;	
+		 ;;
 		"Disciplina")
 			echo "Registo de $opt_r"
 			echo " "
@@ -77,14 +77,14 @@ do
 				echo  "Insira a universidade dentro das seguintes:"
 				cat $f_uni
 				read uni
-		
+
 				if grep -Fxq $uni $f_uni
 				then
 
 					echo  "Insira o/a docente responsável:"
 					cat $f_profs
 					read prof
-								
+
 					if grep -Fxq $prof $f_profs
 					then
 						maxid=$(tail -n 1 $f_alunos | cut -d: -f 1)
@@ -95,14 +95,14 @@ do
 						echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
 						#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
 				        bash "registo.sh"
-						
+
 					else
 						 echo "ERRO: docente inexistente, registe-o primeiro."
 					fi
 
 				else
-					echo "ERRO: Universidade inexistente, registe-a primeiro."	
-				fi	
+					echo "ERRO: Universidade inexistente, registe-a primeiro."
+				fi
 
 			fi
 			;;
@@ -113,7 +113,3 @@ do
 	     *) echo "invalid option $REPLY";;
 	 esac
  done
-			
-			
-			
-            
