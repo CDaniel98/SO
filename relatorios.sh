@@ -9,21 +9,21 @@
 			select opt_r in "${options_registo[@]}"
 			do
 				case $opt_r in
-                    "Listar Universidades")
-						echo "Registo de $opt_r"
-						;;
+        	"Listar Universidades")
+						echo "Registo de $opt_r";;
+
 					"Listar Disciplinas")
-						echo "Registo de $opt_r"
-						;;
+						echo "Registo de $opt_r";;
+
 					"Listar Alunos Erasmus")
-						echo "Registo de $opt_r"
-						;;
+						echo "Registo de $opt_r";;
+
 					"Listar Disciplinas com alunos inscritos")
-						echo "Registo de $opt_r"
-						;;
+						echo "Registo de $opt_r";;
+
 					"Menu anterior")
-						bash "main.sh"
-						;;
+						bash "main.sh";;
+						
 					*) echo "invalid option $REPLY";;
 				esac
 			done

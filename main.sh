@@ -4,6 +4,7 @@
 echo " "
 echo "Menu Principal"
 echo " "
+dat="dados.txt"
 
 PS3='Introduza a opção: '
 options=("Registo/Editar" "Alterar Dados" "Visualizar Dados" "Relatórios" "Sair do Programa")
@@ -17,7 +18,7 @@ do
           bash "alterar_dados.sh";;
 
         "Visualizar Dados")
-          echo "you chose choice $REPLY which is $opt";;
+          cat $dat;; #não sei se isto chega mas acho que sim
 
 		    "Relatórios")
           bash "relatorios.sh";;
