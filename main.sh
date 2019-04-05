@@ -11,21 +11,20 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Registo/Editar")
-		    bash "registo.sh"
-		    ;;
+		      bash "registo.sh";;
+
         "Alterar Dados")
-           bash  "alterar_dados.sh"
-            ;;
+          bash "alterar_dados.sh";;
+
         "Visualizar Dados")
-            echo "you chose choice $REPLY which is $opt"
-			
-            ;;
-		"Relatórios")
-            bash "relatorios.sh"
-            ;;
+          echo "you chose choice $REPLY which is $opt";;
+
+		    "Relatórios")
+          bash "relatorios.sh";;
+
         "Sair do Programa")
-            break
-            ;;
+          break;;
+
         *) echo "invalid option $REPLY";;
     esac
 done
