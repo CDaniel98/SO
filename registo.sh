@@ -74,7 +74,8 @@ do
 			 	then
 					echo "ERRO: nome já existente"
 				else
-					echo $nome >> alunos.txt
+					#echo $nome >> alunos.txt   não se pode fazer assim, se meteres uma uni inexistente ele regista o aluno em aluno.txt e depois não dá para regsitar numa uni existente
+
 					echo  "Insira a universidade dentro das seguintes:"
 					cat $f_uni
 					read uni
@@ -87,10 +88,11 @@ do
 
 							if grep -Fxq $prof $f_profs
 								then
-									maxid=$(tail -n 1 $f_alunos | cut -d: -f 1)
+									maxid=$(tail -n1 dados.txt | cut -d: -f 1) #agora já soma 1 ao id anterior
 
 									let maxid=$maxid+1
 
+									echo $nome >> alunos.txt
 									echo $maxid":"$nome":"$uni":"$prof >> dados.txt
 									echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
 									#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
