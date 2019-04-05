@@ -18,6 +18,8 @@ do
           bash "alterar_dados.sh";;
 
         "Visualizar Dados")
+          echo $opt ":"echo
+          echo
           cat $dat;; #não sei se isto chega mas acho que sim
 
 		    "Relatórios")
