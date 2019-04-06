@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bash Menu Script Example
-
+echo "##################################################################################"
 echo " "
 echo "Menu Principal"
 echo " "

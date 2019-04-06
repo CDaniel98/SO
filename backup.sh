@@ -1,6 +1,7 @@
 #!/bin/bash
 # Bash Menu Script Example
 
+echo "##################################################################################"
 echo " "
 echo "Backups"
 echo " "
@@ -11,15 +12,28 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Criar uma cópia de segurança")
-            echo "Selecione o ficheiro a copiar"
+             echo "Selecione o ficheiro a copiar"
+             ls *.sh
+             read file
 
-		   
+		    echo "Insira o nome da backup:"
+            read novo_nome
+          
+            cp $file $novo_nome
+            bash "backup.sh"
 		    ;;
         "Restaurar uma cópia de segurança")
-           
+            # echo "Indique  nome do ficheiro a restaurar"
+            # read res
+            
+            # bash "backup.sh"
             ;;
         "Apagar uma cópia de segurança")
-            echo "you chose choice $REPLY which is $opt"
+            echo "Selecione o ficheiro a apagar"
+             ls *.sh
+             read file1
+             rm -f $file1
+             bash "backup.sh"
 			
             ;;
 		

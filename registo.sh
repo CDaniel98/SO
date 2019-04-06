@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bash Menu Script Example
-
+echo "##################################################################################"
 echo ""
 echo "Menu Registo/Editar"
 echo " "
@@ -104,7 +104,7 @@ do
 									echo $nome >> alunos.txt
 									echo $maxid":"$nome":"$uni":"$prof >> dados.txt
 									echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
-									
+
 									#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
 							    bash "registo.sh"
 
