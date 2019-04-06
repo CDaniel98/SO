@@ -6,7 +6,7 @@ echo "Menu Principal"
 echo " "
 
 PS3='Introduza a opção: '
-options=("Registo/Editar" "Alterar Dados" "Visualizar Dados" "Relatórios" "Sair do Programa")
+options=("Registo/Editar" "Alterar Dados" "Visualizar Dados" "Relatórios" "Gerir Backups" "Sair do Programa")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -22,6 +22,9 @@ do
             ;;
 		"Relatórios")
             bash "relatorios.sh"
+            ;;
+        "Gerir Backups")
+            bash "backup.sh"
             ;;
         "Sair do Programa")
             break
