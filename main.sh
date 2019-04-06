@@ -18,7 +18,10 @@ do
           bash "alterar_dados.sh"
         ;;
         "Visualizar Dados")
+          echo ""
+          echo "DADOS:"
           cat $dat
+          echo ""
         ;;
 		    "Relatórios")
           bash "relatorios.sh"
