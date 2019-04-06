@@ -26,9 +26,6 @@ do
         "Gerir Backups")
           bash "backup.sh"
         ;;
-		    "Relatórios")
-          bash "relatorios.sh"
-        ;;
         "Sair do Programa")
           break
         ;;
