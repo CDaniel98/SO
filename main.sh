@@ -27,10 +27,7 @@ do
         "Gerir Backups")
             bash "backup.sh"
             ;;
-          echo $opt ":"echo
-          echo
-          cat $dat;; #não sei se isto chega mas acho que sim
-
+          
 		    "Relatórios")
           bash "relatorios.sh";;
 
