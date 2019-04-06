@@ -18,7 +18,9 @@ do
           bash "alterar_dados.sh"
         ;;
         "Visualizar Dados")
-          echo "you chose choice $REPLY which is $opt"
+          echo ""
+          echo "DADOS:"
+          cat $dat
         ;;
 		    "Relatórios")
           bash "relatorios.sh"
