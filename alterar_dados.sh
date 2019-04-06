@@ -37,7 +37,7 @@ do
 				else
 	        echo "ERRO: Esta Universidade não se encontra registada! "
 			fi;;
-			
+
 		 "Professor")
 				echo "Aletrar $opt_r"
 				echo " "
@@ -82,11 +82,12 @@ do
 
 				else
 	        echo "ERRO: Esta disciplina não se encontra registada! "
-			fi;;
+			fi
+		;;
 
 		"Estudante")
 
-			;;
+		;;
 
 		"Menu anterior")
 				bash "main.sh"

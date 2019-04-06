@@ -29,7 +29,7 @@ do
 				else
 					echo $r_uni >> uni.txt
 					echo $r_uni" registada com sucesso! "
-					#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
+					#Chamada do ficheiro novamente para aparecerem as bash "backup.sh" opções do menu, apagar em caso de erro
 					bash "registo.sh"
 					break;
 			fi;;
@@ -88,6 +88,15 @@ do
 
 							if grep -Fxq $prof $f_profs
 								then
+
+									echo "O aluno é de Erasmus? (sim/nao)"
+									read erasmus
+
+									if [ $erasmus = "sim" ]
+										then
+											echo $nome >> erasmus.txt
+									fi
+
 									maxid=$(tail -n1 dados.txt | cut -d: -f 1) #agora já soma 1 ao id anterior
 
 									let maxid=$maxid+1

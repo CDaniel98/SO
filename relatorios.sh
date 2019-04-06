@@ -7,6 +7,8 @@
 
 			unis="uni.txt"
 			dis="dis.txt"
+			dat="dados.txt"
+			erasmus="erasmus.txt"
 
 			PS3='Introduza a opção:'
 			options_registo=("Listar Universidades" "Listar Disciplinas" "Listar Alunos Erasmus" "Listar Disciplinas com alunos inscritos" "Menu anterior")
@@ -17,28 +19,37 @@
 						echo ""
 						echo "UNIVERSIDADES:"
 						echo ""
-						cat $unis;;
+						cat $unis
+						echo ""
+					;;
 
 					"Listar Disciplinas")
 						echo ""
 						echo "DISCIPLINAS:"
 						echo ""
-						cat $dis;;
+						cat $dis
+						echo ""
+					;;
 
 					"Listar Alunos Erasmus")
 						echo ""
 						echo "ALUNOS ERASMUS:"
 						echo ""
-						echo "Registo de $opt_r";;
+						cat $erasmus
+						echo ""
+					;;
 
 					"Listar Disciplinas com alunos inscritos")
 						echo ""
 						echo "DISCIPLINAS COM ALUNOS INSCRITOS"
 						echo ""
-						echo "Registo de $opt_r";;
+						echo "Registo de $opt_r"
+						echo ""
+					;;
 
 					"Menu anterior")
-						bash "main.sh";;
+						bash "main.sh"
+					;;
 
 					*) echo "invalid option $REPLY";;
 				esac
