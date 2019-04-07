@@ -160,7 +160,7 @@ do
 
 						if grep -Fxq $r_prof $f_profs
 							then
-		            echo "Insira o novo nome"
+		            echo "Insira o novo nome:"
 		            read new
 		            sed -i "s/$r_prof/$new/" $f_profs
 								sed -i -e "s/$r_prof/$new/g" $f_dados
@@ -206,6 +206,7 @@ do
 						do
 							case $opt_r in
 								"Universidade")
+								sed -i "/$r_aluno/d" $f_dados
 								;;
 
 								"Professor")
@@ -226,5 +227,6 @@ do
 			"Menu Inicial")
 				bash "main.sh"
 			;;
+			*) echo "invalid option $REPLY";;
 		esac
 	done

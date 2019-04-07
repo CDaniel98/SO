@@ -7,12 +7,15 @@ echo " "
 dat="dados.txt"
 
 PS3='Introduza a opção: '
-options=("Registar Dados" "Alterar/Apagar Dados" "Visualizar Dados" "Relatórios" "Gerir Backups" "Sair do Programa")
+options=("Registar Dados" "Inscrições a Cadeiras" "Alterar/Apagar Dados" "Visualizar Dados" "Relatórios" "Gerir Backups" "Sair do Programa")
 select opt in "${options[@]}"
 do
     case $opt in
         "Registar Dados")
 		      bash "registo.sh"
+        ;;
+        "Inscrições a Cadeiras")
+          bash "inscrever_cadeiras.sh"
         ;;
         "Alterar/Apagar Dados")
           bash "alterar_dados.sh"

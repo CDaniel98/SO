@@ -102,6 +102,7 @@ do
 									let maxid=$maxid+1
 
 									echo $nome >> alunos.txt
+									echo $nome: >> inscritos.txt
 									echo $maxid":"$nome":"$uni":"$prof >> dados.txt
 									echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
 
