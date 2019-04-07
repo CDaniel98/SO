@@ -24,6 +24,7 @@ do
           echo ""
           echo "DADOS:"
           cat $dat
+          bash "main.sh"
         ;;
 		    "Relatórios")
           bash "relatorios.sh"

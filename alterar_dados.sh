@@ -200,22 +200,24 @@ do
 
 					"Estudante")
 						echo ""
-						echo "Menu Alterar dados do Estudante"
-						echo " "
-						PS3='Introduza a opção:'
-						options_registo=("Universidade" "Professor" "Menu Anterior")
-						select opt_r in "${options_registo[@]}"
-						do
-							case $opt_r in
-								"Universidade")
-								sed -i "/$r_aluno/d" $f_dados
-								;;
+						echo "Função não implementada"
+						#echo " "
+					#	PS3='Introduza a opção:'
+					#	options_registo=("Universidade" "Professor" "Menu Anterior")
+						#select opt_r in "${options_registo[@]}"
+					#	do
+						#	case $opt_r in
+							#	"Universidade")
+							#	sed -i "/$r_aluno/d" $f_dados
+							#	;;
 
-								"Professor")
-								;;
-							esac
-						done
-					;;
+							#	"Professor")
+							#	;;
+							#esac
+					#	done
+					   
+						 bash "alterar_dados.sh" 
+					   ;;
 
 					"Menu Anterior")
 							bash "alterar_dados.sh"
