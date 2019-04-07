@@ -29,7 +29,7 @@ do
 			do
 				case $opt_r in
 					"Universidade")
-						echo "Aletrar $opt_r"
+						echo "Alterar $opt_r"
 						echo " "
 						echo "Insira o nome da Universidade a apagar:"
 						cat $f_uni
@@ -50,7 +50,7 @@ do
 					;;
 
 				 "Professor")
-						echo "Aletrar $opt_r"
+						echo "Alterar $opt_r"
 						echo " "
 						echo "Insira o nome do Professor a apagar:"
 						cat $f_profs
@@ -70,7 +70,7 @@ do
 					;;
 
 					"Disciplina")
-						echo "Aletrar $opt_r"
+						echo "Alterar $opt_r"
 						echo " "
 						echo "Insira o nome da Disciplina a apagar:"
 						cat $f_disc
@@ -89,7 +89,7 @@ do
 					;;
 
 					"Estudante")
-						echo "Aletrar $opt_r"
+						echo "Alterar $opt_r"
 						echo " "
 						echo "Insira o nome do Estudante a apagar:"
 						cat $f_alunos
