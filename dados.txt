@@ -1,5 +1,5 @@
-1:Pedro:FEUP:Gustavo
+1::FEUP:Gustavo
 2:Ana:FEUP:Matilde
-3:João:Evora:Matilde
+3::Evora:Matilde
 4:José:Evora:Matilde
-5:Rita:FEUP:João
+5:Rita:FEUP:
