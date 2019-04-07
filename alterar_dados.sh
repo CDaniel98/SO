@@ -6,11 +6,11 @@ echo "Menu Alterar/Apagar dados"
 echo " "
 f_alunos="alunos.txt"
 f_profs="profs.txt"
-f_disc="disc.txt"
+f_disc="dis.txt"
 f_uni="uni.txt"
 f_dados="dados.txt"
 f_erasmus="erasmus.txt"
-
+f_insc="inscritos.txt"
 
 
 PS3='Introduza a opção:'
@@ -40,7 +40,7 @@ do
 								sed -i -e "s/$r_uni//g" $f_uni
 								sed -i -e "s/$r_uni//g" $f_dados
 								#Chamada do ficheiro novamente para aparecerem as opções do menu
-								bash "registo.sh"
+								bash "alterar_dados.sh"
 								echo " "
 								break;
 
@@ -60,7 +60,7 @@ do
 							then
 								sed -i -e "s/$r_prof//g" $f_profs
 								sed -i -e "s/$r_prof//g" $f_dados
-								bash "registo.sh"
+								bash "alterar_dados.sh"
 								echo " "
 								break;
 
@@ -79,7 +79,8 @@ do
 						if grep -Fxq $r_disc $f_disc
 							then
 								sed -i -e "s/$r_disc//g" $f_disc
-								bash "registo.sh"
+								sed -i -e "s/$r_disc//g" $f_insc
+								bash "alterar_dados.sh"
 								echo " "
 								break;
 
@@ -100,7 +101,7 @@ do
 								sed -i "/$r_aluno/d" $f_dados
 								sed -i -e "s/$r_aluno//g" $f_erasmus
 								sed -i -e "s/$r_aluno//g" $f_alunos
-								bash "registo.sh"
+								bash "alterar_dados.sh"
 								echo " "
 								break;
 
@@ -142,7 +143,7 @@ do
 				        sed -i "s/$r_uni/$new/" $f_uni
 								sed -i -e "s/$r_uni/$new/g" $f_dados
 								echo $r_uni"->"$new
-								bash "registo.sh"
+								bash "alterar_dados.sh"
 				        echo " "
 								break;
 
@@ -165,7 +166,7 @@ do
 		            sed -i "s/$r_prof/$new/" $f_profs
 								sed -i -e "s/$r_prof/$new/g" $f_dados
 								echo $r_prof"->"$new
-								bash "registo.sh"
+								bash "alterar_dados.sh"
 				        echo " "
 								break;
 
@@ -186,8 +187,9 @@ do
 				        echo "Insira o novo nome"
 				        read new
 				        sed -i "s/$r_disc/$new/" $f_disc
+								sed -i -e "s/$r_disc/$new/g" $f_insc
 								echo $r_disc"->"$new
-								bash "registo.sh"
+								bash "alterar_dados.sh"
 				        echo " "
 								break;
 

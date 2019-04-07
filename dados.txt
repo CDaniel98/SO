@@ -1,5 +1,6 @@
-1:Ana:ISEC:Sara
-3:Pedro:ISEC:Sara
+1:Ana:ISEC:Gaspar
+3:Pedro:ISEC:Gaspar
 4:Paulo:Evora:Gustavo
-5:Mara:ISEC:Sara
-6:Andre:ISEC:Sara
+5:Mara:ISEC:Gaspar
+6:Andre:ISEC:Gaspar
+7:Diana:FEUP:João
