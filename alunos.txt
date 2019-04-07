@@ -1,5 +1,3 @@
-Pedro
 Ana
-João
-José
-Rita
+Pedro
+Paulo

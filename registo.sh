@@ -11,7 +11,7 @@ f_uni="uni.txt"
 f_dados="dados.txt"
 
 PS3='Introduza a opção:'
-options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu anterior")
+options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu Inicial")
 
 select opt_r in "${options_registo[@]}"
 do
@@ -117,7 +117,7 @@ do
 					fi
 			fi;;
 
-		"Menu anterior")
+		"Menu Inicial")
 			bash "main.sh";;
 
 	    *) echo "invalid option $REPLY";;
