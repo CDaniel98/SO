@@ -122,7 +122,7 @@ do
 		"Alterar")
 			echo ""
 			echo "Menu Alterar dados"
-			echo " "
+			echo ""
 			PS3='Introduza a opção:'
 			options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu Anterior")
 
