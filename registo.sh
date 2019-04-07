@@ -11,7 +11,7 @@ f_uni="uni.txt"
 f_dados="dados.txt"
 
 PS3='Introduza a opção:'
-options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu anterior")
+options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu Inicial")
 
 select opt_r in "${options_registo[@]}"
 do
@@ -104,7 +104,7 @@ do
 									echo $nome >> alunos.txt
 									echo $maxid":"$nome":"$uni":"$prof >> dados.txt
 									echo $maxid":"$nome":"$uni":"$prof" -> Dados guardados"
-									
+
 									#Chamada do ficheiro novamente para aparecerem as opções do menu, apagar em caso de erro
 							    bash "registo.sh"
 
@@ -117,7 +117,7 @@ do
 					fi
 			fi;;
 
-		"Menu anterior")
+		"Menu Inicial")
 			bash "main.sh";;
 
 	    *) echo "invalid option $REPLY";;

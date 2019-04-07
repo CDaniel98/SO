@@ -11,7 +11,7 @@
 			erasmus="erasmus.txt"
 
 			PS3='Introduza a opção:'
-			options_registo=("Listar Universidades" "Listar Disciplinas" "Listar Alunos Erasmus" "Listar Disciplinas com alunos inscritos" "Menu anterior")
+			options_registo=("Listar Universidades" "Listar Disciplinas" "Listar Alunos Erasmus" "Listar Disciplinas com alunos inscritos" "Menu Inicial")
 			select opt_r in "${options_registo[@]}"
 			do
 				case $opt_r in
@@ -47,7 +47,7 @@
 						echo ""
 					;;
 
-					"Menu anterior")
+					"Menu Inicial")
 						bash "main.sh"
 					;;
 
