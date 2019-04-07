@@ -9,9 +9,10 @@
 			dis="dis.txt"
 			dat="dados.txt"
 			erasmus="erasmus.txt"
+			prof="profs.txt"
 
 			PS3='Introduza a opção:'
-			options_registo=("Listar Universidades" "Listar Disciplinas" "Listar Alunos Erasmus" "Listar Disciplinas com alunos inscritos" "Menu Inicial")
+			options_registo=("Listar Universidades" "Listar Disciplinas" "Listar Professores" "Listar Alunos Erasmus" "Listar Disciplinas com alunos inscritos" "Menu Inicial")
 			select opt_r in "${options_registo[@]}"
 			do
 				case $opt_r in
@@ -28,6 +29,14 @@
 						echo "DISCIPLINAS:"
 						echo ""
 						cat $dis
+						echo ""
+					;;
+
+					"Listar Professores")
+						echo ""
+						echo "PROFESSORES:"
+						echo ""
+						cat $prof
 						echo ""
 					;;
 

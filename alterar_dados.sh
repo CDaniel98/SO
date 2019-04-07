@@ -19,7 +19,9 @@ select opt_ri in "${options_registo_inicial[@]}"
 do
 	case $opt_ri in
 		"Apagar")
-
+			echo ""
+			echo "Menu Apagar dados"
+			echo " "
 			PS3='Introduza a opção:'
 			options_registo=("Universidade" "Professor" "Disciplina" "Estudante" "Menu Anterior")
 
@@ -108,7 +110,7 @@ do
 					;;
 
 					"Menu Anterior")
-							bash "alterar_dados.sh"
+						bash "alterar_dados.sh"
 					;;
 
 						 *) echo "invalid option $REPLY";;
@@ -117,7 +119,9 @@ do
 		;;
 
 		"Alterar")
-
+			echo ""
+			echo "Menu Alterar dados"
+			echo " "
 			PS3='Introduza a opção:'
 			options_registo=("Universidade" "Professor" "Disciplina" "Estudante"  "Menu Anterior")
 
@@ -138,7 +142,6 @@ do
 				        sed -i "s/$r_uni/$new/" $f_uni
 								sed -i -e "s/$r_uni/$new/g" $f_dados
 								echo $r_uni"->"$new
-								#Chamada do ficheiro novamente para aparecerem as opções do menu
 								bash "registo.sh"
 				        echo " "
 								break;
@@ -162,8 +165,6 @@ do
 		            sed -i "s/$r_prof/$new/" $f_profs
 								sed -i -e "s/$r_prof/$new/g" $f_dados
 								echo $r_prof"->"$new
-				                #Se o professor estiver designado a algum aluno altera-se?
-								#Chamada do ficheiro novamente para aparecerem as opções do menu
 								bash "registo.sh"
 				        echo " "
 								break;
@@ -196,42 +197,18 @@ do
 					;;
 
 					"Estudante")
+						echo ""
+						echo "Menu Alterar dados do Estudante"
+						echo " "
 						PS3='Introduza a opção:'
 						options_registo=("Universidade" "Professor" "Menu Anterior")
 						select opt_r in "${options_registo[@]}"
 						do
 							case $opt_r in
 								"Universidade")
-									cat $f_dados
-									echo "Insira o ID do aluno"
-									read id
-
-									if grep -Fxq $id $f_dados
-										then
-
-											echo "Insira a nova universidade das seguintes:"
-											cat $f_uni
-											read $new
-											sed -i -e "s/$del/$new/g" $f_dados
-									fi
 								;;
 
 								"Professor")
-									cat $f_dados
-									echo "Insira o ID do aluno"
-									read id
-
-									del=$(tail -n1 dados.txt | cut -d: -f 2)
-									echo "TAILED"
-									echo $del
-
-									if grep -Fxq $id $f_dados
-										then
-											echo "Insira o novo professor dos seguintes:"
-											cat $f_profs
-											read $new
-											sed -i -e "s/$del/$new/g" $f_dados
-									fi
 								;;
 							esac
 						done
