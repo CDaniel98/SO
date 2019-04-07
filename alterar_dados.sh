@@ -206,12 +206,13 @@ do
 									echo "Insira o ID do aluno"
 									read id
 
-									del=$(tail -n1 dados.txt | cut -d: -f 3)
-									echo $del
-
 									if grep -Fxq $id $f_dados
 										then
-											sed -i -e "s/$uni//g" $f_dados
+
+											echo "Insira a nova universidade das seguintes:"
+											cat $f_uni
+											read $new
+											sed -i -e "s/$del/$new/g" $f_dados
 									fi
 								;;
 
@@ -221,11 +222,15 @@ do
 									read id
 
 									del=$(tail -n1 dados.txt | cut -d: -f 2)
+									echo "TAILED"
 									echo $del
 
 									if grep -Fxq $id $f_dados
 										then
-											sed -i -e "s/$del//g" $f_dados
+											echo "Insira o novo professor dos seguintes:"
+											cat $f_profs
+											read $new
+											sed -i -e "s/$del/$new/g" $f_dados
 									fi
 								;;
 							esac
