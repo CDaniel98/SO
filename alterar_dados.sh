@@ -215,8 +215,8 @@ do
 							#	;;
 							#esac
 					#	done
-					   
-						 bash "alterar_dados.sh" 
+
+						 bash "alterar_dados.sh"
 					   ;;
 
 					"Menu Anterior")
