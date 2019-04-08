@@ -13,20 +13,20 @@ do
     case $opt in
         "Criar uma cópia de segurança")
              echo "Selecione o ficheiro a copiar"
-             ls *.sh
+             ls
              read file
 
-		    echo "Insira o nome da backup:"
-            read novo_nome
-          
-            cp $file $novo_nome
+
+            cp $file backups/$novo_nome
             bash "backup.sh"
 		    ;;
         "Restaurar uma cópia de segurança")
-            # echo "Indique  nome do ficheiro a restaurar"
-            # read res
-            
-            # bash "backup.sh"
+             echo "Indique  nome do ficheiro a restaurar"
+             read res
+
+            # bash "back
+            cp backups/$file $file
+            bash "backup.sh"
             ;;
         "Apagar uma cópia de segurança")
             echo "Selecione o ficheiro a apagar"
@@ -34,9 +34,9 @@ do
              read file1
              rm -f $file1
              bash "backup.sh"
-			
+
             ;;
-		
+
         "Voltar atrás")
             bash "main.sh"
             ;;
