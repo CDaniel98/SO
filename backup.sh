@@ -30,9 +30,9 @@ do
             ;;
         "Apagar uma cópia de segurança")
             echo "Selecione o ficheiro a apagar"
-             ls 
+             ls backups/
              read file1
-             rm -f $file1
+             rm -f backups/$file1
              bash "backup.sh"
 
             ;;
