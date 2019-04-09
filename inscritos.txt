@@ -1,6 +1,7 @@
 Ana:Matematica:Fisica::
 Pedro:
-Paulo:
+Paulo:Fisica:
 Mara:
 Andre:
 Diana:
+a:
